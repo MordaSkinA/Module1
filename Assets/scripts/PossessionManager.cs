@@ -1,85 +1,110 @@
-using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 
 public interface IPossessable
 {
     void OnPossess();
     void OnUnpossess();
+    GameObject GetCameraObject();
 }
 
 public class PossessionManager : MonoBehaviour
 {
-    [SerializeField] private float possessionRadius = 3f;
     [SerializeField] private LayerMask possessableLayer;
-    [SerializeField] private MonoBehaviour startingBody;
-    [SerializeField] private CinemachineCamera cinemachineCamera;
+    [SerializeField] private Camera spiritCamera;
+    [SerializeField] private GameObject spiritCameraObject;
+    private GameObject currentCameraObject;
 
-    private Module1 playerInput;
+    private Module1 input;
     private MonoBehaviour currentBody;
 
     private void Awake()
     {
-        playerInput = new Module1();
-        playerInput.CharacterControls.Possess.performed += OnPossessInput;
+        input = new Module1();
+        input.SpiritControls.Click.performed += OnClickInput;
+        input.GlobalControls.Exit.performed += OnExitInput;
     }
 
     private void Start()
     {
-        if (startingBody is IPossessable possessable)
-        {
-            Possess(startingBody, possessable);
-        }
+        spiritCameraObject.SetActive(true);
     }
 
     private void OnEnable()
     {
-        playerInput.CharacterControls.Enable();
+        input.SpiritControls.Enable();
+        input.GlobalControls.Enable();
     }
 
     private void OnDisable()
     {
-        playerInput.CharacterControls.Disable();
+        input.SpiritControls.Disable();
+        input.GlobalControls.Disable();
     }
 
-    private void OnPossessInput(InputAction.CallbackContext context)
+    private void OnClickInput(InputAction.CallbackContext context)
     {
-        TryPossessNearbyBody();
-    }
-
-    private void TryPossessNearbyBody()
-    {
-        Vector3 originPosition = currentBody != null ? currentBody.transform.position : transform.position;
-        Collider[] hits = Physics.OverlapSphere(originPosition, possessionRadius, possessableLayer);
-
-        foreach (Collider hit in hits)
+        if (currentBody != null)
         {
-            IPossessable possessable = hit.GetComponent<IPossessable>();
+            return;
+        }
+
+        TryPossessAtCursor();
+    }
+
+    private void OnExitInput(InputAction.CallbackContext context)
+    {
+        if (currentBody == null)
+        {
+            return;
+        }
+
+        Unpossess();
+    }
+
+    private void TryPossessAtCursor()
+    {
+        Ray ray = spiritCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 1000f, possessableLayer))
+        {
+            IPossessable possessable = hit.collider.GetComponent<IPossessable>();
             MonoBehaviour target = possessable as MonoBehaviour;
 
-            if (possessable != null && target != currentBody)
+            if (possessable != null)
             {
                 Possess(target, possessable);
-                return;
             }
         }
     }
 
     private void Possess(MonoBehaviour newBody, IPossessable possessable)
     {
-        if (currentBody != null && currentBody is IPossessable oldPossessable)
-        {
-            oldPossessable.OnUnpossess();
-            currentBody.enabled = false;
-        }
-
         newBody.enabled = true;
         possessable.OnPossess();
-
         currentBody = newBody;
 
-        cinemachineCamera.Follow = newBody.transform;
-        cinemachineCamera.LookAt = newBody.transform;
+        spiritCameraObject.SetActive(false);
+        currentCameraObject = possessable.GetCameraObject();
+        currentCameraObject.SetActive(true);
+
+        input.SpiritControls.Disable();
+    }
+
+    private void Unpossess()
+    {
+        if (currentBody is IPossessable possessable)
+        {
+            possessable.OnUnpossess();
+        }
+
+        currentBody.enabled = false;
+        currentBody = null;
+
+        currentCameraObject.SetActive(false);
+        currentCameraObject = null;
+        spiritCameraObject.SetActive(true);
+
+        input.SpiritControls.Enable();
     }
 }

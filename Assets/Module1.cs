@@ -121,6 +121,16 @@ public partial class @Module1: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""c674f622-6031-4308-9767-426be150b7da"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -211,6 +221,161 @@ public partial class @Module1: IInputActionCollection2, IDisposable
                     ""action"": ""Possess"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6c8579b7-f0a9-4080-9a19-88d0d5d678d7"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""SpiritControls"",
+            ""id"": ""c60cae49-9176-4466-9f8a-6e114cb6b871"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""d77f5d5d-e123-4093-915b-30724617fa96"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Zoom"",
+                    ""type"": ""Value"",
+                    ""id"": ""78e38fb5-d81a-425f-b069-6f1f865d83d6"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""430911d1-f6be-406e-9b05-92fddeb95783"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""4863d44d-e288-47f4-8ebe-607dc64aff31"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""eed12c21-6326-4617-a988-b59b7ece9250"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""834108fb-ed38-44f6-94cf-5ab766bfe64d"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""bce294ad-34e9-443c-88d3-b0f055670c42"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""62740db7-5f51-4e0f-bd6c-7641d2460095"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ccccb88f-cd6f-4919-81c8-e418323282bd"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aca43da6-3aa3-4042-9891-eb047dc23b7a"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""GlobalControls"",
+            ""id"": ""bf72e934-c0da-4985-a0eb-a42e4d53a6b9"",
+            ""actions"": [
+                {
+                    ""name"": ""Exit"",
+                    ""type"": ""Button"",
+                    ""id"": ""1db8194f-44cf-4279-8f10-10bbe05e3c90"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""f19cfc4e-ed45-4abd-b880-3356b755283c"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -283,11 +448,22 @@ public partial class @Module1: IInputActionCollection2, IDisposable
         m_CharacterControls_Move = m_CharacterControls.FindAction("Move", throwIfNotFound: true);
         m_CharacterControls_Run = m_CharacterControls.FindAction("Run", throwIfNotFound: true);
         m_CharacterControls_Possess = m_CharacterControls.FindAction("Possess", throwIfNotFound: true);
+        m_CharacterControls_Look = m_CharacterControls.FindAction("Look", throwIfNotFound: true);
+        // SpiritControls
+        m_SpiritControls = asset.FindActionMap("SpiritControls", throwIfNotFound: true);
+        m_SpiritControls_Move = m_SpiritControls.FindAction("Move", throwIfNotFound: true);
+        m_SpiritControls_Zoom = m_SpiritControls.FindAction("Zoom", throwIfNotFound: true);
+        m_SpiritControls_Click = m_SpiritControls.FindAction("Click", throwIfNotFound: true);
+        // GlobalControls
+        m_GlobalControls = asset.FindActionMap("GlobalControls", throwIfNotFound: true);
+        m_GlobalControls_Exit = m_GlobalControls.FindAction("Exit", throwIfNotFound: true);
     }
 
     ~@Module1()
     {
         UnityEngine.Debug.Assert(!m_CharacterControls.enabled, "This will cause a leak and performance issues, Module1.CharacterControls.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_SpiritControls.enabled, "This will cause a leak and performance issues, Module1.SpiritControls.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_GlobalControls.enabled, "This will cause a leak and performance issues, Module1.GlobalControls.Disable() has not been called.");
     }
 
     /// <summary>
@@ -366,6 +542,7 @@ public partial class @Module1: IInputActionCollection2, IDisposable
     private readonly InputAction m_CharacterControls_Move;
     private readonly InputAction m_CharacterControls_Run;
     private readonly InputAction m_CharacterControls_Possess;
+    private readonly InputAction m_CharacterControls_Look;
     /// <summary>
     /// Provides access to input actions defined in input action map "CharacterControls".
     /// </summary>
@@ -389,6 +566,10 @@ public partial class @Module1: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "CharacterControls/Possess".
         /// </summary>
         public InputAction @Possess => m_Wrapper.m_CharacterControls_Possess;
+        /// <summary>
+        /// Provides access to the underlying input action "CharacterControls/Look".
+        /// </summary>
+        public InputAction @Look => m_Wrapper.m_CharacterControls_Look;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -424,6 +605,9 @@ public partial class @Module1: IInputActionCollection2, IDisposable
             @Possess.started += instance.OnPossess;
             @Possess.performed += instance.OnPossess;
             @Possess.canceled += instance.OnPossess;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
         }
 
         /// <summary>
@@ -444,6 +628,9 @@ public partial class @Module1: IInputActionCollection2, IDisposable
             @Possess.started -= instance.OnPossess;
             @Possess.performed -= instance.OnPossess;
             @Possess.canceled -= instance.OnPossess;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
         }
 
         /// <summary>
@@ -477,6 +664,220 @@ public partial class @Module1: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="CharacterControlsActions" /> instance referencing this action map.
     /// </summary>
     public CharacterControlsActions @CharacterControls => new CharacterControlsActions(this);
+
+    // SpiritControls
+    private readonly InputActionMap m_SpiritControls;
+    private List<ISpiritControlsActions> m_SpiritControlsActionsCallbackInterfaces = new List<ISpiritControlsActions>();
+    private readonly InputAction m_SpiritControls_Move;
+    private readonly InputAction m_SpiritControls_Zoom;
+    private readonly InputAction m_SpiritControls_Click;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "SpiritControls".
+    /// </summary>
+    public struct SpiritControlsActions
+    {
+        private @Module1 m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public SpiritControlsActions(@Module1 wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "SpiritControls/Move".
+        /// </summary>
+        public InputAction @Move => m_Wrapper.m_SpiritControls_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "SpiritControls/Zoom".
+        /// </summary>
+        public InputAction @Zoom => m_Wrapper.m_SpiritControls_Zoom;
+        /// <summary>
+        /// Provides access to the underlying input action "SpiritControls/Click".
+        /// </summary>
+        public InputAction @Click => m_Wrapper.m_SpiritControls_Click;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_SpiritControls; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="SpiritControlsActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(SpiritControlsActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="SpiritControlsActions" />
+        public void AddCallbacks(ISpiritControlsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_SpiritControlsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_SpiritControlsActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @Zoom.started += instance.OnZoom;
+            @Zoom.performed += instance.OnZoom;
+            @Zoom.canceled += instance.OnZoom;
+            @Click.started += instance.OnClick;
+            @Click.performed += instance.OnClick;
+            @Click.canceled += instance.OnClick;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="SpiritControlsActions" />
+        private void UnregisterCallbacks(ISpiritControlsActions instance)
+        {
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @Zoom.started -= instance.OnZoom;
+            @Zoom.performed -= instance.OnZoom;
+            @Zoom.canceled -= instance.OnZoom;
+            @Click.started -= instance.OnClick;
+            @Click.performed -= instance.OnClick;
+            @Click.canceled -= instance.OnClick;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="SpiritControlsActions.UnregisterCallbacks(ISpiritControlsActions)" />.
+        /// </summary>
+        /// <seealso cref="SpiritControlsActions.UnregisterCallbacks(ISpiritControlsActions)" />
+        public void RemoveCallbacks(ISpiritControlsActions instance)
+        {
+            if (m_Wrapper.m_SpiritControlsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="SpiritControlsActions.AddCallbacks(ISpiritControlsActions)" />
+        /// <seealso cref="SpiritControlsActions.RemoveCallbacks(ISpiritControlsActions)" />
+        /// <seealso cref="SpiritControlsActions.UnregisterCallbacks(ISpiritControlsActions)" />
+        public void SetCallbacks(ISpiritControlsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_SpiritControlsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_SpiritControlsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="SpiritControlsActions" /> instance referencing this action map.
+    /// </summary>
+    public SpiritControlsActions @SpiritControls => new SpiritControlsActions(this);
+
+    // GlobalControls
+    private readonly InputActionMap m_GlobalControls;
+    private List<IGlobalControlsActions> m_GlobalControlsActionsCallbackInterfaces = new List<IGlobalControlsActions>();
+    private readonly InputAction m_GlobalControls_Exit;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "GlobalControls".
+    /// </summary>
+    public struct GlobalControlsActions
+    {
+        private @Module1 m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public GlobalControlsActions(@Module1 wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "GlobalControls/Exit".
+        /// </summary>
+        public InputAction @Exit => m_Wrapper.m_GlobalControls_Exit;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_GlobalControls; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="GlobalControlsActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(GlobalControlsActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="GlobalControlsActions" />
+        public void AddCallbacks(IGlobalControlsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_GlobalControlsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GlobalControlsActionsCallbackInterfaces.Add(instance);
+            @Exit.started += instance.OnExit;
+            @Exit.performed += instance.OnExit;
+            @Exit.canceled += instance.OnExit;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="GlobalControlsActions" />
+        private void UnregisterCallbacks(IGlobalControlsActions instance)
+        {
+            @Exit.started -= instance.OnExit;
+            @Exit.performed -= instance.OnExit;
+            @Exit.canceled -= instance.OnExit;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="GlobalControlsActions.UnregisterCallbacks(IGlobalControlsActions)" />.
+        /// </summary>
+        /// <seealso cref="GlobalControlsActions.UnregisterCallbacks(IGlobalControlsActions)" />
+        public void RemoveCallbacks(IGlobalControlsActions instance)
+        {
+            if (m_Wrapper.m_GlobalControlsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="GlobalControlsActions.AddCallbacks(IGlobalControlsActions)" />
+        /// <seealso cref="GlobalControlsActions.RemoveCallbacks(IGlobalControlsActions)" />
+        /// <seealso cref="GlobalControlsActions.UnregisterCallbacks(IGlobalControlsActions)" />
+        public void SetCallbacks(IGlobalControlsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_GlobalControlsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_GlobalControlsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="GlobalControlsActions" /> instance referencing this action map.
+    /// </summary>
+    public GlobalControlsActions @GlobalControls => new GlobalControlsActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
@@ -570,5 +971,56 @@ public partial class @Module1: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPossess(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Look" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLook(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "SpiritControls" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="SpiritControlsActions.AddCallbacks(ISpiritControlsActions)" />
+    /// <seealso cref="SpiritControlsActions.RemoveCallbacks(ISpiritControlsActions)" />
+    public interface ISpiritControlsActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Zoom" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnZoom(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Click" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnClick(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "GlobalControls" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="GlobalControlsActions.AddCallbacks(IGlobalControlsActions)" />
+    /// <seealso cref="GlobalControlsActions.RemoveCallbacks(IGlobalControlsActions)" />
+    public interface IGlobalControlsActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Exit" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnExit(InputAction.CallbackContext context);
     }
 }
