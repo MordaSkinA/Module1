@@ -7,6 +7,7 @@ public class FirstPersonController : MonoBehaviour, IPossessable
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private float rotationSpeed = 12f;
     [SerializeField] private float runMultiplier = 3f;
+    [SerializeField] private float moveSpeed = 4f;
     [SerializeField] private float mouseSensitivity = 0.1f;
     [SerializeField] private float minPitch = -80f;
     [SerializeField] private float maxPitch = 80f;
@@ -85,7 +86,7 @@ public class FirstPersonController : MonoBehaviour, IPossessable
         Vector3 direction = transform.right * moveInput.x + transform.forward * moveInput.y;
         direction = Vector3.ClampMagnitude(direction, 1f);
 
-        float speed = isRunPressed ? runMultiplier : 1f;
+        float speed = moveSpeed * (isRunPressed ? runMultiplier : 1f);
         characterController.Move(direction * speed * Time.deltaTime);
     }
 }
